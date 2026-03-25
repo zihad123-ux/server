@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollabSphere | Server Storage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="navbar">
+            <div class="logo">
+                <i class="fas fa-cloud-upload-alt"></i> CollabSphere 
+                <span class="server-badge"><i class="fas fa-server"></i> Server</span>
+            </div>
+            <div class="auth-buttons" id="authArea"></div>
+        </div>
+
+        <div id="adminPanel" class="admin-panel" style="display: none;">
+            <h3><i class="fas fa-pen-alt"></i> Admin Panel - Create Post</h3>
+            <input type="text" id="postTitle" placeholder="Post title">
+            <textarea id="postContent" rows="3" placeholder="Post content"></textarea>
+            <button id="createPostBtn" class="btn btn-primary">Publish Post</button>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="posts-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-newspaper"></i> Posts</h2>
+                    <span id="postCount" class="badge">0</span>
+                </div>
+                <div id="postsContainer" class="posts-container">
+                    <div class="loading">Loading...</div>
+                </div>
+            </div>
+
+            <div class="messages-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-envelope"></i> Messages to Admin</h2>
+                    <span id="msgCount" class="badge">0</span>
+                </div>
+                <div id="messagesContainer" class="messages-container">
+                    <div class="loading">Loading...</div>
+                </div>
+                <div class="message-form">
+                    <input type="text" id="messageInput" placeholder="Type your message...">
+                    <button id="sendMessageBtn" class="btn btn-send">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
